@@ -130,10 +130,15 @@ footer p {
     position: absolute;
     top: 20px;
     right: 35px;
-    color: white;
+    color: #ff6b81; /* Altera a cor do botão para preto */
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.close:hover {
+    color: #ff1135; /* Cor ao passar o mouse */
 }
 
 #caption {
@@ -145,3 +150,4 @@ footer p {
     width: 80%;
     font-size: 18px; /* Ajuste de fonte para a legenda */
 }
+
