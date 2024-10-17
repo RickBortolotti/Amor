@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Galeria de Fotos</h1>
+        <p>Momentos especiais juntos!</p>
+        <div id="countdown"></div>
+    </header>
+    <main>
+        <div class="gallery">
+            <div class="photo" data-date="12/06/2022" data-description="Esta foi a viagem juntos!">
+                <img src="foto1.jpg" alt="Descrição da foto 1">
+            </div>
+            <div class="photo" data-date="14/02/2023" data-description="Dia dos namorados!">
+                <img src="foto2.jpg" alt="Descrição da foto 2">
+            </div>
+            <div class="photo" data-date="10/10/2023" data-description="Um dia especial!">
+                <img src="foto3.jpg" alt="Descrição da foto 3">
+            </div>
+            <div class="photo" data-date="15/03/2023" data-description="Festa de aniversário!">
+                <img src="foto3.jpg" alt="Descrição da foto 4">
+            </div>
+            <div class="photo" data-date="01/05/2023" data-description="Passeio no parque!">
+                <img src="foto3.jpg" alt="Descrição da foto 5">
+            </div>
+            <div class="photo" data-date="20/06/2023" data-description="Viagem à praia!">
+                <img src="foto3.jpg" alt="Descrição da foto 6">
+            </div>
+            <div class="photo" data-date="04/07/2023" data-description="Que dia incrível!">
+                <img src="foto3.jpg" alt="Descrição da foto 7">
+            </div>
+            <div class="photo" data-date="21/08/2023" data-description="Dia de sol!">
+                <img src="foto3.jpg" alt="Descrição da foto 8">
+            </div>
+            <div class="photo" data-date="30/09/2023" data-description="Um momento especial!">
+                <img src="foto3.jpg" alt="Descrição da foto 9">
+            </div>
+            <div class="photo" data-date="15/10/2023" data-description="Dia das crianças!">
+                <img src="foto1.jpg" alt="Descrição da foto 10">
+            </div>
+            <div class="photo" data-date="31/10/2023" data-description="Halloween!">
+                <img src="foto1.jpg" alt="Descrição da foto 11">
+            </div>
+            <div class="photo" data-date="11/11/2023" data-description="Passeio cultural!">
+                <img src="foto2.jpg" alt="Descrição da foto 12">
+            </div>
+            <div class="photo" data-date="12/12/2023" data-description="Natal em família!">
+                <img src="foto3.jpg" alt="Descrição da foto 13">
+            </div>
+            <div class="photo" data-date="01/01/2024" data-description="Ano Novo!">
+                <img src="foto3.jpg" alt="Descrição da foto 14">
+            </div>
+            <div class="photo" data-date="14/02/2024" data-description="Mais um Dia dos Namorados!">
+                <img src="foto3.jpg" alt="Descrição da foto 15">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Com Amor Rick.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
