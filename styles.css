@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400&display=swap');
+
+html, body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte padrão para o corpo */
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f5; /* Cor suave de fundo */
+    color: #333; /* Cor do texto */
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b81, #ffb6c1); /* Gradiente em tons de rosa */
+    color: #4b2c54; /* Texto escuro para contraste */
+    padding: 40px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #ff4d6d; /* Linha na parte inferior */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Dancing Script', cursive; /* Fonte romântica para o título */
+}
+
+p {
+    font-size: 1.2em;
+    font-style: italic; /* Itálico para a descrição */
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold; /* Negrito para o cronômetro */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.photo {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative; /* Para posicionar o coração */
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #ff6b81; /* Borda inferior para a imagem */
+}
+
+.photo p {
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+}
+
+.photo::after {
+    content: '❤️'; /* Coração no canto inferior */
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 24px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px; /* Aumentado para mais espaço */
+    background: linear-gradient(135deg, #f8d0e8, #ffb6c1); /* Gradiente suave em tons de rosa */
+    color: #4b2c54; /* Texto escuro para contraste */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Dancing Script', cursive; /* Fonte romântica para o rodapé */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    border-top: 5px solid #ff6b81; /* Borda superior em rosa */
+}
+
+footer p {
+    margin: 0; /* Remove margem padrão */
+    font-size: 28px; /* Tamanho do texto maior */
+    font-style: italic; /* Estilo itálico para um toque mais suave */
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1000; /* Coloca o modal na frente */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ff6b81; /* Cor do texto */
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s; /* Transição suave para a cor */
+    border-radius: 5px; /* Arredonda os cantos da borda */
+    padding: 5px; /* Espaçamento interno para o botão */
+}
+
+.close:hover {
+    color: #ff1538; /* Cor ao passar o mouse */
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    font-size: 18px; /* Ajuste de fonte para a legenda */
+}
+
