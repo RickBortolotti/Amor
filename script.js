@@ -1,5 +1,5 @@
 // Data de início do relacionamento
-const startDate = new Date('2024-06-01'); // Formato correto
+const startDate = new Date('2024-06-01'); // Formato de data ajustado
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {
@@ -7,30 +7,27 @@ function updateCountdown() {
     const timeDiff = now - startDate;
 
     // Calcular anos, meses e dias
-    const years = now.getFullYear() - startDate.getFullYear();
-    const months = now.getMonth() - startDate.getMonth();
-    const days = now.getDate() - startDate.getDate();
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    let days = now.getDate() - startDate.getDate();
 
-    // Ajustar meses e dias se necessário
-    let displayYears = years;
-    let displayMonths = months;
-    
+    // Ajustar se necessário
     if (days < 0) {
-        displayMonths -= 1;
-        const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0); // último dia do mês anterior
-        days += lastMonth.getDate(); // pega os dias do mês anterior
+        months--;
+        const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += lastMonth.getDate();
     }
 
-    if (displayMonths < 0) {
-        displayYears -= 1;
-        displayMonths += 12; // ajusta os meses
+    if (months < 0) {
+        years--;
+        months += 12;
     }
 
     // Atualizar o texto do contador
-    if (displayYears > 0) {
-        countdownElement.textContent = `${displayYears} anos, ${displayMonths} meses e ${days} dias juntos!`;
+    if (years > 0) {
+        countdownElement.textContent = `${years} anos, ${months} meses e ${days} dias juntos!`;
     } else {
-        countdownElement.textContent = `${displayMonths} meses e ${days} dias juntos!`;
+        countdownElement.textContent = `${months} meses e ${days} dias juntos!`;
     }
 }
 
@@ -61,3 +58,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+// Aguardar o carregamento do DOM
+document.addEventListener("DOMContentLoaded", () => {
+    updateCountdown(); // Inicializar após o carregamento
+});
+
