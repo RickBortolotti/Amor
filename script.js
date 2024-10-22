@@ -1,5 +1,5 @@
 // Data de início do relacionamento
-const startDate = new Date('2024-06-1'); // Substitua pela data do seu relacionamento
+const startDate = new Date('2024-06-01'); // Formato correto
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {
@@ -12,7 +12,7 @@ function updateCountdown() {
     const days = now.getDate() - startDate.getDate();
 
     // Ajustar meses e dias se necessário
-    let displayYears = 0;
+    let displayYears = years;
     let displayMonths = months;
     
     if (days < 0) {
@@ -22,17 +22,15 @@ function updateCountdown() {
     }
 
     if (displayMonths < 0) {
-        displayYears = years - 1;
+        displayYears -= 1;
         displayMonths += 12; // ajusta os meses
-    } else {
-        displayYears = years;
     }
 
     // Atualizar o texto do contador
     if (displayYears > 0) {
-        countdownElement.textContent = `${displayYears} anos, ${displayMonths} mêses e ${days} dias juntos!`;
+        countdownElement.textContent = `${displayYears} anos, ${displayMonths} meses e ${days} dias juntos!`;
     } else {
-        countdownElement.textContent = `${displayMonths} mêses e ${days} dias juntos!`;
+        countdownElement.textContent = `${displayMonths} meses e ${days} dias juntos!`;
     }
 }
 
